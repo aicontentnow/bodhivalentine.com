@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bodhi Valentine — Creative Direction &amp; AI Production Systems</title>
+<meta name="description" content="Creative direction, brand systems and AI production pipelines. Selected work and reel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#07090b;
+  --ink-2:#0c1014;
+  --panel:rgba(255,255,255,.035);
+  --panel-2:rgba(255,255,255,.055);
+  --hair:rgba(255,255,255,.10);
+  --hair-2:rgba(255,255,255,.16);
+  --fg:#f2f5f7;
+  --fg-dim:#9aa6ae;
+  --fg-dimmer:#6b757c;
+  --acc:#c4ff36;
+  --acc-dim:rgba(196,255,54,.14);
+  --display:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Space Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--fg);
+  font-family:var(--display);font-weight:300;
+  font-size:17px;line-height:1.65;letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(900px 600px at 78% -8%, rgba(196,255,54,.055), transparent 62%),
+    radial-gradient(800px 700px at 8% 4%, rgba(80,140,255,.05), transparent 60%),
+    radial-gradient(1000px 800px at 50% 108%, rgba(196,255,54,.03), transparent 65%);
+}
+.wrap{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 28px}
+a{color:inherit}
+
+/* ---------- type ---------- */
+.label{
+  font-family:var(--mono);font-size:11px;font-weight:400;
+  letter-spacing:.20em;text-transform:uppercase;color:var(--fg-dimmer);
+}
+h1,h2,h3{font-weight:500;letter-spacing:-.02em;line-height:1.1;margin:0}
+h1{font-size:clamp(2.5rem,6.2vw,4.6rem);font-weight:600;letter-spacing:-.035em}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+h3{font-size:1.16rem;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+p{margin:0 0 1.1em}
+.lede{font-size:clamp(1.06rem,1.9vw,1.32rem);line-height:1.55;color:#dbe3e8;max-width:60ch}
+.dim{color:var(--fg-dim)}
+.acc{color:var(--acc)}
+
+/* ---------- header ---------- */
+header{padding:34px 0 0}
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand svg{display:block;flex:none}
+.brand-name{font-family:var(--mono);font-size:12.5px;letter-spacing:.19em;text-transform:uppercase;color:var(--fg)}
+.brand-sub{font-family:var(--mono);font-size:12.5px;letter-spacing:.19em;text-transform:uppercase;color:var(--fg-dimmer)}
+.top nav{display:flex;gap:26px}
+.top nav a{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--fg-dim);text-decoration:none;padding-bottom:3px;
+  border-bottom:1px solid transparent;transition:color .2s,border-color .2s;
+}
+.top nav a:hover{color:var(--acc);border-bottom-color:var(--acc-dim)}
+
+/* ---------- hero ---------- */
+.hero{padding:78px 0 34px}
+.hero h1{margin-bottom:22px}
+.hero h1 .soft{color:var(--fg-dim);font-weight:300}
+.hero .lede{margin-bottom:0}
+
+/* ---------- reel ---------- */
+.reel{margin:44px 0 0}
+.reel-frame{
+  position:relative;border-radius:14px;overflow:hidden;
+  border:1px solid var(--hair);background:var(--ink-2);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.02) inset;
+}
+.reel-frame video{display:block;width:100%;height:auto;background:#000}
+.reel-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;flex-wrap:wrap;margin-top:14px;
+}
+.reel-meta .left{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.pill{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--acc);border:1px solid var(--acc-dim);background:rgba(196,255,54,.05);
+  padding:5px 11px;border-radius:999px;
+}
+.reel-note{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--fg-dimmer)}
+
+/* ---------- frame strip ---------- */
+.strip{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:8px;
+}
+.strip figure{margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--hair);background:var(--ink-2);aspect-ratio:16/9}
+.strip img{display:block;width:100%;height:100%;object-fit:cover;opacity:.82;transition:opacity .3s,transform .5s}
+.strip figure:hover img{opacity:1;transform:scale(1.04)}
+
+/* ---------- rule ---------- */
+.rule{height:1px;background:linear-gradient(90deg,var(--hair-2),transparent 72%);margin:0}
+
+/* ---------- sections ---------- */
+section{padding:92px 0}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:34px;flex-wrap:wrap}
+.sec-head .label{padding-top:4px}
+
+/* ---------- scope strip ---------- */
+.scope{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:12px;overflow:hidden}
+.scope div{background:var(--ink-2);padding:22px 20px}
+.scope .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-dimmer);margin-bottom:8px}
+.scope .v{font-size:.98rem;color:#dbe3e8;line-height:1.4}
+
+/* ---------- work ---------- */
+.work{display:grid;gap:18px}
+.case{
+  border:1px solid var(--hair);border-radius:14px;background:var(--panel);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:30px 30px 28px;
+  display:grid;grid-template-columns:64px 1fr;gap:26px;align-items:start;
+  transition:border-color .25s,background .25s,transform .25s;
+}
+.case:hover{border-color:var(--hair-2);background:var(--panel-2);transform:translateY(-2px)}
+.case .num{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--acc);padding-top:5px}
+.case h3{margin-bottom:6px}
+.case .org{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-dimmer);margin-bottom:13px}
+.case p{color:var(--fg-dim);font-size:.99rem;margin:0 0 14px;max-width:68ch}
+.case p:last-child{margin-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--fg-dim);border:1px solid var(--hair);border-radius:5px;padding:4px 9px;
+}
+
+/* ---------- numbers ---------- */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.num-card{border:1px solid var(--hair);border-radius:12px;background:var(--panel);padding:26px 22px}
+.num-card .big{font-family:var(--mono);font-weight:700;font-size:clamp(1.6rem,3vw,2.15rem);color:var(--acc);line-height:1;letter-spacing:-.02em}
+.num-card .cap{margin-top:12px;font-size:.9rem;color:var(--fg-dim);line-height:1.45}
+
+/* ---------- contact ---------- */
+.contact{
+  border:1px solid var(--hair);border-radius:16px;background:var(--panel);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:52px 44px;
+}
+.contact h2{margin-bottom:16px}
+.contact .lede{margin-bottom:26px}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;padding:13px 22px;border-radius:8px;
+  border:1px solid var(--hair-2);color:var(--fg);transition:all .2s;
+}
+.btn:hover{border-color:var(--acc);color:var(--acc);background:rgba(196,255,54,.05)}
+.btn.primary{background:var(--acc);color:#0a0d05;border-color:var(--acc);font-weight:700}
+.btn.primary:hover{background:#d4ff5e;color:#0a0d05}
+
+footer{padding:44px 0 60px;border-top:1px solid var(--hair);margin-top:20px}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot span{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--fg-dimmer)}
+
+@media (max-width:860px){
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .scope{grid-template-columns:repeat(2,1fr)}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .top nav{display:none}
+  section{padding:66px 0}
+  .case{grid-template-columns:1fr;gap:14px;padding:26px 22px}
+  .case .num{padding-top:0}
+  .contact{padding:36px 26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="top">
+      <a class="brand" href="#top">
+        <svg width="30" height="30" viewBox="0 0 128 128" aria-hidden="true">
+          <g fill="none" stroke="#c4ff36" stroke-width="9" stroke-linecap="round">
+            <circle cx="64" cy="64" r="40"/>
+            <path d="M64 8v20M64 100v20M8 64h20M100 64h20"/>
+            <path d="M40 92 88 36"/>
+          </g>
+        </svg>
+        <span><span class="brand-name">Bodhi Valentine</span></span>
+      </a>
+      <nav>
+        <a href="#reel">Reel</a>
+        <a href="#work">Work</a>
+        <a href="#method">Method</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="label" style="margin-bottom:26px">Creative Direction · Brand Systems · AI Production</div>
+    <h1>I build the systems<br><span class="soft">the work comes out of.</span></h1>
+    <p class="lede">
+      Creative direction and brand identity for a NASDAQ-listed technology company, paired with the
+      AI production pipeline that makes the output repeatable. Most people who can architect the system
+      cannot judge what comes out of it. Most who can judge the output cannot build the system.
+    </p>
+  </div>
+
+  <div class="reel" id="reel">
+    <div class="reel-frame">
+      <!-- Drop FRAMEZERO_PORTFOLIO_REEL_FINAL_web.mp4 and reel-poster.jpg beside this file -->
+      <video
+        controls
+        preload="metadata"
+        playsinline
+        poster="reel-poster.jpg">
+        <source src="FRAMEZERO_PORTFOLIO_REEL_FINAL_web.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="reel-meta">
+      <div class="left">
+        <span class="pill">Selected work · 2025–2026</span>
+        <span class="reel-note">Written, designed, directed and produced solo</span>
+      </div>
+      <span class="reel-note">1:19 · Sound on</span>
+    </div>
+  </div>
+
+  <div class="strip" aria-label="Frames from the reel">
+    <figure><img src="still-1.jpg" alt="Product agent character on a holographic platform" loading="lazy"></figure>
+    <figure><img src="still-2.jpg" alt="Agent character with a global network map" loading="lazy"></figure>
+    <figure><img src="still-3.jpg" alt="Field technician with an augmented reality overlay at sunrise" loading="lazy"></figure>
+    <figure><img src="still-4.jpg" alt="Armoured figure in a data centre corridor" loading="lazy"></figure>
+    <figure><img src="still-5.jpg" alt="City skyline at night with network arcs" loading="lazy"></figure>
+    <figure><img src="still-6.jpg" alt="Character technician with field equipment" loading="lazy"></figure>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="work">
+    <div class="sec-head">
+      <span class="label">01 — 05</span>
+      <h2>Selected work</h2>
+    </div>
+
+    <div class="work">
+
+      <article class="case">
+        <div class="num">01</div>
+        <div>
+          <h3>AI Film Studio — proof of concept</h3>
+          <div class="org">Harmonic Inc. (NASDAQ: HLIT)</div>
+          <p>
+            Proposed the AI video production operating model to leadership, was assigned to lead the proof
+            of concept, and delivered a complete 35-shot explainer in a ten working day sprint. Directed a
+            three-person cross-functional team across time zones, set the production standards they worked
+            to, and trained them on a toolchain none of them had used before.
+          </p>
+          <div class="tags"><span class="tag">Creative direction</span><span class="tag">Shot design</span><span class="tag">Team leadership</span><span class="tag">Generative video</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="num">02</div>
+        <div>
+          <h3>The production pipeline and prompt optimizer</h3>
+          <div class="org">Custom tooling · Built, not bought</div>
+          <p>
+            A 46-node pipeline spanning seven-plus AI platforms, taking script to storyboard to
+            high-resolution first and last frames to finished clips with audio. Alongside it, a prompt
+            optimizer that reads the generated storyboard back against the original script treatment and
+            writes the timestamped direction between keyframes. Clip generation went from hours per scene
+            to fifteen minutes.
+          </p>
+          <div class="tags"><span class="tag">Pipeline architecture</span><span class="tag">Prompt engineering</span><span class="tag">Workflow automation</span><span class="tag">Tooling</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="num">03</div>
+        <div>
+          <h3>Visual identity and the agent character system</h3>
+          <div class="org">Harmonic Inc. — corporate rebrand foundation</div>
+          <p>
+            A complete visual identity system, now the foundation of the corporate rebrand, built after the
+            design function was vacated and without allocated budget. Includes the product agent family —
+            distinct characters with a shared design language, colour coding and holographic staging —
+            carried consistently across launch, product and campaign surfaces.
+          </p>
+          <div class="tags"><span class="tag">Brand system</span><span class="tag">Character design</span><span class="tag">Art direction</span><span class="tag">Design language</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="num">04</div>
+        <div>
+          <h3>Neuroflix — original vertical series</h3>
+          <div class="org">Founder · 2024 to present</div>
+          <p>
+            Vertical micro-series development for neurodivergent storytelling across comedy and drama.
+            Characters, sets, scripts, visual language and series bibles, written, designed and produced
+            end to end. Run as a production system rather than a set of one-off pieces, which is what makes
+            solo output at this scope possible.
+          </p>
+          <div class="tags"><span class="tag">Original IP</span><span class="tag">World building</span><span class="tag">Series bible</span><span class="tag">Writing</span></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="num">05</div>
+        <div>
+          <h3>Client and consulting work</h3>
+          <div class="org">Independent · Fortune 500 and mid-market</div>
+          <p>
+            Sixteen years of brand and creative strategy: brand narrative, visual identity, high-conversion
+            landing pages, long-form content and video scripts, with creative direction for multimedia
+            production. Hired, directed and developed freelance designers, illustrators and motion people,
+            and managed agency and studio partners.
+          </p>
+          <div class="tags"><span class="tag">Brand strategy</span><span class="tag">Creative direction</span><span class="tag">Freelance and agency</span><span class="tag">Content systems</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="method">
+    <div class="sec-head">
+      <span class="label">Measured</span>
+      <h2>What the systems actually changed</h2>
+    </div>
+    <div class="nums">
+      <div class="num-card">
+        <div class="big">95%</div>
+        <div class="cap">Reduction in clip generation time. Hours per scene down to fifteen minutes.</div>
+      </div>
+      <div class="num-card">
+        <div class="big">60–70%</div>
+        <div class="cap">Cut in content development time, by making the foundation reusable instead of rebuilding per campaign.</div>
+      </div>
+      <div class="num-card">
+        <div class="big">10 days</div>
+        <div class="cap">A complete 35-shot explainer, start to delivery, with a three-person team.</div>
+      </div>
+      <div class="num-card">
+        <div class="big">86 pages</div>
+        <div class="cap">Production documentation and team training, so the capability outlived the pilot.</div>
+      </div>
+    </div>
+    <p class="dim" style="margin-top:30px;max-width:66ch;font-size:.98rem">
+      I also said no. A hundred-plus shot concept was declined after a feasibility analysis against real
+      pilot data, with the failure modes documented, the hours projected, and three scoped alternatives
+      offered instead. Knowing what not to build is the same skill as knowing how.
+    </p>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="contact">
+    <div class="contact">
+      <span class="label">Contact</span>
+      <h2 style="margin-top:14px">Let's talk about the work</h2>
+      <p class="lede">
+        Vancouver, BC. Available for creative leadership roles where the mandate is to build the
+        capability, not just run the calendar.
+      </p>
+      <div class="links">
+        <a class="btn primary" href="mailto:mindfulvancouver@gmail.com">mindfulvancouver@gmail.com</a>
+        <a class="btn" href="https://linkedin.com/in/bodhivalentine" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <span>Bodhi Valentine — Vancouver, BC</span>
+      <span>FRAMEZERØ CREATIVE</span>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
