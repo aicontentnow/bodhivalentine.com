@@ -122,6 +122,9 @@ section{padding:92px 0}
   font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--fg-dimmer);
   padding:10px 14px;background:var(--ink-2);border-top:1px solid var(--hair)
 }
+.board-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+@media (max-width:760px){.board-grid{grid-template-columns:1fr}}
+
 .plate--turn{max-width:760px;margin:0 auto}
 .agent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px;margin:16px 0}
 .agent-grid figcaption{text-align:center;padding:8px 4px;letter-spacing:.14em;text-transform:uppercase}
@@ -313,6 +316,40 @@ footer{padding:44px 0 60px;border-top:1px solid var(--hair);margin-top:20px}
       <img src="agents-turnaround.jpg" alt="Four-view character turnaround sheet for one agent" loading="lazy">
       <figcaption>Every character shipped with a four-view turnaround and vectors. That is what makes a character reusable by a team instead of a single render by one person.</figcaption>
     </figure>
+  </section>
+</div>
+
+
+<div class="wrap">
+  <section id="boards">
+    <div class="sec-head">
+      <span class="label">Exploration</span>
+      <h2>Three directions, before anything was built</h2>
+    </div>
+
+    <p class="standfirst">
+      Concept 1 was the near-term bet and it is the one that shipped. Concept 3 pushed the same brand
+      years out to find the edge of what it could become. The character study sat underneath both and
+      is what the agent family grew out of. Each board carries a complete system: moodboard, palette
+      with values, typography, key visual, website hero, full page scroll, mobile.
+    </p>
+
+    <p class="standfirst">
+      This is the part of creative direction that does not survive into the finished work, and it is
+      the part that decides whether the finished work is any good. Choosing well is easy once the
+      options exist. Making the options exist is the job.
+    </p>
+
+    <div class="board-grid">
+        <figure class="plate"><img src="board-arc-1.jpg" alt="Creative direction board" loading="lazy"><figcaption>Concept 1, the near-term direction: brand, key visual, website, mobile</figcaption></figure>
+        <figure class="plate"><img src="board-arc-2.jpg" alt="Creative direction board" loading="lazy"><figcaption>Concept 1 continued: system applied across surfaces</figcaption></figure>
+        <figure class="plate"><img src="board-living-1.jpg" alt="Creative direction board" loading="lazy"><figcaption>Concept 3, the long-horizon direction: a different material language entirely</figcaption></figure>
+        <figure class="plate"><img src="board-living-2.jpg" alt="Creative direction board" loading="lazy"><figcaption>Concept 3: key visual and platform architecture</figcaption></figure>
+        <figure class="plate"><img src="board-living-3.jpg" alt="Creative direction board" loading="lazy"><figcaption>Concept 3: environment and network vision</figcaption></figure>
+        <figure class="plate"><img src="board-living-4.jpg" alt="Creative direction board" loading="lazy"><figcaption>Concept 3: full page and product surfaces</figcaption></figure>
+        <figure class="plate"><img src="board-archetype-1.jpg" alt="Creative direction board" loading="lazy"><figcaption>Character archetype study: three agents, their roles, the world they live in</figcaption></figure>
+        <figure class="plate"><img src="board-archetype-2.jpg" alt="Creative direction board" loading="lazy"><figcaption>Character archetype study: system and application</figcaption></figure>
+    </div>
   </section>
 </div>
 
